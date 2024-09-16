@@ -45,26 +45,27 @@ public class ProductDao {
     }
 
     //Update of CRUD
-    public void updateProduct(Product pr) {
-        Transaction trns = null;
-        Session session = ProductConfig.getSessionFactory().openSession();
-        try {
-            trns = session.beginTransaction();
-            session.update(pr);
-            session.getTransaction().commit();
-        } catch (RuntimeException e) {
-            if (trns != null) {
-                trns.rollback();
-            }
-            e.printStackTrace();
-//        } finally {
-//            session.flush();
-//            session.close();
+//    public void updateProduct(Product pr) {
+//        Transaction trns = null;
+//        Session session = ProductConfig.getSessionFactory().openSession();
+//        try {
+//            trns = session.beginTransaction();
+//            session.update(pr);
+//            session.getTransaction().commit();
+//        } catch (RuntimeException e) {
+//            if (trns != null) {
+//                trns.rollback();
+//            }
+//            e.printStackTrace();
+////        } finally {
+////            session.flush();
+////            session.close();
+////        }
+//
+//
 //        }
 
 
-        }
-}
 
 
 
